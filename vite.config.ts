@@ -18,4 +18,7 @@ export default defineConfig({
   // define: {
   //   'process.env': process.env,
   // }
+  base: process.env.GITHUB_PAGES
+  ? 'REPOSITORY_NAME' // レポジトリ名を設定
+  : './'
 })
