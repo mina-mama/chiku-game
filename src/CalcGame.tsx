@@ -166,7 +166,7 @@ function CalcGame() {
                 <LinearProgress variant="determinate" value={enemyDamage} sx={{ height: 30 }} />
               </Box>
               <Box sx={[isEnemyAttack ? attack : null, { position: "relative" }]}>
-                <img src={import.meta.env.BASE_URL + enemyImg} height={200} />
+                <img src={import.meta.env.BASE_URL + "/" + enemyImg} height={200} />
                 <Box sx={isBigAttack && isEnemyAttack ? bigAttack : null} />
               </Box>
             </Box>
