@@ -22,11 +22,9 @@ dist-ssr
 *.sln
 *.sw?
 
-dist/enemy*
-dist/mushi*
-dist/you*
+
 public/enemy*
 public/mushi*
 public/you*
+dist
 sqlite
-
