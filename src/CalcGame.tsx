@@ -132,7 +132,10 @@ function CalcGame() {
           <Typography fontSize={50} pb={2}>{enemyDamage <= 0 ? "きみ" : "てき"} の かち</Typography>
           <Box pb={3}>
             {/* {enemyDamage <= 0 ? <img src={"/" + youImg} height={300} /> : <img src={"/" + enemyImg} height={300} />} */}
-            {enemyDamage <= 0 ? <img src={"/" + youImg} height={300} style={{ transform: "scale(-1, 1)" }} /> : <img src={"/" + enemyImg} height={300} />}
+            {enemyDamage <= 0
+              ? <img src={import.meta.env.BASE_URL + youImg} height={300} style={{ transform: "scale(-1, 1)" }} />
+              : <img src={import.meta.env.BASE_URL + enemyImg} height={300} />
+            }
           </Box>
           <Button variant='contained' sx={{ fontSize: 80 }}
             onClick={() => {
@@ -143,6 +146,7 @@ function CalcGame() {
         </Box>
         :
         <Box p={1} width={"100%"} justifyItems={"center"}>
+          {import.meta.env.BASE_URL}
           <Stack direction={"row"}>
             <Box p={1}>
               <Typography fontSize={50}>きみ</Typography>
@@ -155,7 +159,7 @@ function CalcGame() {
                   position: "relative",
                 }, isYouAttack ? attack : null]}>
                   {/* <img src={"/" + youImg} height={200} /> */}
-                  <img src={"/" + youImg} height={200} style={{ transform: "scale(-1, 1)" }} />
+                  <img src={import.meta.env.BASE_URL + youImg} height={200} style={{ transform: "scale(-1, 1)" }} />
                   <Box sx={isBigAttack && isYouAttack ? bigAttack : null} />
                 </Box>
               </Box>
@@ -166,7 +170,7 @@ function CalcGame() {
                 <LinearProgress variant="determinate" value={enemyDamage} sx={{ height: 30 }} />
               </Box>
               <Box sx={[isEnemyAttack ? attack : null, { position: "relative" }]}>
-                <img src={import.meta.env.BASE_URL + "/" + enemyImg} height={200} />
+                <img src={import.meta.env.BASE_URL + enemyImg} height={200} />
                 <Box sx={isBigAttack && isEnemyAttack ? bigAttack : null} />
               </Box>
             </Box>

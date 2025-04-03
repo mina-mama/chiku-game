@@ -152,7 +152,7 @@ function HiraganaSelect() {
                 process === "start" && you !== null &&
                 <Box>
                     <Typography fontSize={35}>やせいの {you.name} が あらわれた</Typography>
-                    <img src={"/" + you.img} height={300} />
+                    <img src={import.meta.env.BASE_URL + you.img} height={300} />
                     <Typography fontSize={35} m={2}>つかまえる？</Typography>
                     <Stack direction={"row"} spacing={2} ml="auto" mr="auto">
                         <Button variant='contained' sx={{ fontSize: 35, width: "100%" }}
@@ -180,7 +180,7 @@ function HiraganaSelect() {
                             return hearts
                         })()}
                     </Stack>
-                    <img src={"/" + you.img} height={300} />
+                    <img src={import.meta.env.BASE_URL + you.img} height={300} />
                     <Stack direction={"row"} spacing={2} ml="auto" mr="auto">
                         <Button variant='contained' sx={{ fontSize: 50, width: "100%" }}
                             onClick={handleTry(a)}
@@ -230,7 +230,7 @@ function HiraganaSelect() {
                             })()}
                         </Stack>
                         <Box>
-                            <img src={"/" + you.img} height={300} />
+                            <img src={import.meta.env.BASE_URL + you.img} height={300} />
                         </Box>
                         <Button variant='contained' sx={{ fontSize: 50, mt: 3 }}
                             onClick={() => {

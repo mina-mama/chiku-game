@@ -19,6 +19,6 @@ export default defineConfig({
   //   'process.env': process.env,
   // }
   base: process.env.GITHUB_PAGES
-  ? 'chiku-game' // レポジトリ名を設定
-  : './'
+    ? 'chiku-game/' // レポジトリ名を設定
+    : './'
 })
