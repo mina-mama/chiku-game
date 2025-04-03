@@ -146,7 +146,6 @@ function CalcGame() {
         </Box>
         :
         <Box p={1} width={"100%"} justifyItems={"center"}>
-          {import.meta.env.BASE_URL}
           <Stack direction={"row"}>
             <Box p={1}>
               <Typography fontSize={50}>きみ</Typography>
